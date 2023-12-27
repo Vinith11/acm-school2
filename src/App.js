@@ -8,7 +8,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Home/>
+      <Outlet />
       <Footer />
     </>
   );
