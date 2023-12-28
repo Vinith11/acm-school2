@@ -1,5 +1,4 @@
 import React from "react";
-import Ronaldo from "../assets/Ronaldo.webp";
 
 const TeachCard = ({ img, name, width, height }) => {
   return (
