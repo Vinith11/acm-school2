@@ -1,5 +1,6 @@
 import React, { useState, useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import conf from "../conf/conf"
 
 const Admission = () => {
   const form = useRef();
@@ -22,7 +23,7 @@ const Admission = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_mdhbtu9', 'template_mxl71dm', form.current, 'i6F7ItNekAc0b868p')
+    emailjs.sendForm(conf.serviceId, conf.templateContact, form.current, conf.publicKey)
       .then((result) => {
           console.log(result.text);
       }, (error) => {

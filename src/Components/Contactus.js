@@ -23,7 +23,8 @@ const Contactus = () => {
     e.preventDefault();
 
     // conf.serviceId, conf.templateContact, form.current, conf.publicKey
-    emailjs.sendForm("service_mdhbtu9","template_e12of3f",form.current,"z6wW3-IRAA59Y_M9J")
+    // "service_mdhbtu9","template_e12of3f",form.current,"z6wW3-IRAA59Y_M9J"
+    emailjs.sendForm(conf.serviceId, conf.templateContact, form.current, conf.publicKey)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
