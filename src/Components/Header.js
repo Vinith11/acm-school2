@@ -4,9 +4,12 @@ import Ronaldo from "../assets/Ronaldo.webp"
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "About Us", href: "#about-us", current: true },
-  { name: "Gallery", href: "#gallery", current: false },
-  { name: "Contact Us", href: "#contact", current: false },
+  { name: "About Us", href: "/#about-us", current: true },
+  { name: "Gallery", href: "/#gallery", current: false },
+  { name: "Contact Us", href: "/#contact", current: false },
+  { name: "Events", href: "/events", current: false },
+  { name: "Faculty", href: "/faculty", current: false },
+  { name: "Admission", href: "/admission", current: false },
 ];
 
 function classNames(...classes) {
@@ -32,7 +35,7 @@ export default function Header() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start max-sm:hidden">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ">
                 <Link to="/" className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
@@ -57,14 +60,6 @@ export default function Header() {
                         {item.name}
                       </a>
                     ))}
-                    <Link
-                      to="/admission"
-                      className="text-black rounded-md px-3 py-2 text-sm font-medium"
-                    >
-                      Admission
-                    </Link>
-                    <Link to="/events" className="text-black rounded-md px-3 py-2 text-sm font-medium">Events</Link>
-                    <Link to="/faculty" className="text-black rounded-md px-3 py-2 text-sm font-medium">Faculty</Link>
                   </div>
                 </div>
               </div>
