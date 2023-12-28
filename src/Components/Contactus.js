@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef} from 'react';
+import emailjs from '@emailjs/browser';
+import conf from "../conf/conf"
 
 const Contactus = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
-    contactNumber: '',
+    number: '',
     email: '',
     message: '',
   });
@@ -16,9 +19,16 @@ const Contactus = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    // conf.serviceId, conf.templateContact, form.current, conf.publicKey
+    emailjs.sendForm("service_mdhbtu9","template_e12of3f",form.current,"z6wW3-IRAA59Y_M9J")
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
 
   return (
@@ -28,7 +38,7 @@ const Contactus = () => {
       <div className="md:flex-1">
       <div className="max-w-md mx-auto p-4 md:p-6 bg-white rounded-md shadow-md">
       <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-600">
             Name
@@ -45,14 +55,14 @@ const Contactus = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="contactNumber" className="block text-sm font-medium text-gray-600">
-            Contact Number
+          <label htmlFor="number" className="block text-sm font-medium text-gray-600">
+          Number
           </label>
           <input
-            type="tel"
-            id="contactNumber"
-            name="contactNumber"
-            value={formData.contactNumber}
+            type="text"
+            id="number"
+            name="number"
+            value={formData.number}
             onChange={handleChange}
             className="mt-1 p-2 w-full border rounded-md"
             required

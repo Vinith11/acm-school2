@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Components/Card";
+import { imgEvents } from "../assets";
 
 const Events = () => {
   return (
@@ -10,12 +11,12 @@ const Events = () => {
 
       <div className="flex flex-wrap max-sm:flex-col  gap-4 p-2 justify-center items-center">
         {/* Card 1 */}
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>        
+        {
+          imgEvents.map((items)=>(
+            <Card key={items.name} {...items}/>
+          ))
+        }
+       
       </div>
     </div>
   );

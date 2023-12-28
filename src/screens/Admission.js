@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 const Admission = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     contactNumber: "",
@@ -17,10 +19,18 @@ const Admission = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    emailjs.sendForm('service_mdhbtu9', 'template_mxl71dm', form.current, 'i6F7ItNekAc0b868p')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   };
+
+
   return (
     <div id="contact" className="py-16">
       <div className="flex flex-col md:flex-row p-4 md:p-8">
@@ -29,7 +39,7 @@ const Admission = () => {
             <h2 className="text-2xl font-semibold mb-4 text-center">
               Admission
             </h2>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               {/* Name */}
               <div className="mb-4">
                 <label
@@ -43,6 +53,25 @@ const Admission = () => {
                   id="name"
                   name="name"
                   value={formData.name}
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full border rounded-md"
+                  required
+                />
+              </div>
+
+              {/* std */}
+              <div className="mb-4">
+                <label
+                  htmlFor="classStd"
+                  className="block text-sm font-medium text-gray-600"
+                >
+                  Class
+                </label>
+                <input
+                  type="text"
+                  id="classStd"
+                  name="classStd"
+                  value={formData.classStd}
                   onChange={handleChange}
                   className="mt-1 p-2 w-full border rounded-md"
                   required
@@ -104,25 +133,6 @@ const Admission = () => {
                   rows="4"
                   required
                 ></textarea>
-              </div>
-
-              {/* std */}
-              <div className="mb-4">
-                <label
-                  htmlFor="classStd"
-                  className="block text-sm font-medium text-gray-600"
-                >
-                  Class
-                </label>
-                <input
-                  type="text"
-                  id="classStd"
-                  name="classStd"
-                  value={formData.classStd}
-                  onChange={handleChange}
-                  className="mt-1 p-2 w-full border rounded-md"
-                  required
-                />
               </div>
 
               <div className="flex ">
