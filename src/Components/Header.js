@@ -1,16 +1,17 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Ronaldo from "../images/Ronaldo.webp"
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Ronaldo from "../images/Ronaldo.webp";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: 'About Us', href: '#about-us', current: true },
-  { name: 'Gallery', href: '#gallery', current: false },
-  { name: 'Contact Us', href: '#contact', current: false },
-]
+  { name: "About Us", href: "#about-us", current: true },
+  { name: "Gallery", href: "#gallery", current: false },
+  { name: "Contact Us", href: "#contact", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Header() {
@@ -33,13 +34,13 @@ export default function Header() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start max-sm:hidden">
-                <div className="flex flex-shrink-0 items-center">
+                <Link to="/" className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
                     src={Ronaldo}
                     alt="Your Company"
                   />
-                </div>
+                </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -47,21 +48,26 @@ export default function Header() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-orange-400 text-white' : 'text-black',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          item.current
+                            ? "bg-orange-400 text-white"
+                            : "text-black",
+                          "rounded-md px-3 py-2 text-sm font-medium"
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </a>
                     ))}
+                    <Link
+                      to="/admission"
+                      className="text-black rounded-md px-3 py-2 text-sm font-medium"
+                    >
+                      Admission
+                    </Link>
+                    <Link to="/events" className="text-black rounded-md px-3 py-2 text-sm font-medium">Events</Link>
+                    <Link to="/faculty" className="text-black rounded-md px-3 py-2 text-sm font-medium">Faculty</Link>
                   </div>
                 </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-
-                {/* Profile dropdown */}
-
               </div>
             </div>
           </div>
@@ -74,10 +80,12 @@ export default function Header() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-orange-400 text-black' : 'text-black hover:bg-white hover:text-black',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-orange-400 text-black"
+                      : "text-black hover:bg-white hover:text-black",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -87,5 +95,5 @@ export default function Header() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
