@@ -111,10 +111,10 @@ const Contactus = () => {
       </div>
 
       <div className="md:flex-1 bg-gray-200 p-4 md:p-6 rounded-md mt-4 md:mt-0">
-        <h2 className="text-2xl font-semibold mb-4">Scool2</h2>
+        <h2 className="text-2xl font-semibold mb-4">Government Kannada Lower Primary School</h2>
         <div className="mb-2">
           <label className="block text-sm font-medium text-gray-600">Address</label>
-          <p className="text-gray-800">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi suscipit voluptatum ratione error laboriosam odio.</p>
+          <p className="text-gray-800">Angol Main Road, Chidambarnagar, Angol, Belagavi.</p>
         </div>
         <div className="mb-2">
           <label className="block text-sm font-medium text-gray-600">Contact Number</label>
