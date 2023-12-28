@@ -1,5 +1,5 @@
 import React from 'react'
-import Ronaldo from "../images/Ronaldo.webp"
+import Ronaldo from "../assets/Ronaldo.webp"
 
 const Topdiv = () => {
   return (

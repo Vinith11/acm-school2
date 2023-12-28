@@ -10,10 +10,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import Admission from "./Components/screens/Admission";
-import Events from "./Components/screens/Events";
-import Faculty from "./Components/screens/Faculty";
-import Home from "./Components/screens/Home";
+import Admission from "./screens/Admission";
+import Events from "./screens/Events";
+import Faculty from "./screens/Faculty";
+import Home from "./screens/Home";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
