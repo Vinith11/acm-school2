@@ -4,7 +4,7 @@ import img3 from "./Images/img3.jpg"
 import img4 from "./Images/img4.jpg"
 import img5 from "./Images/img5.jpg"
 // import img6 from "./Images/img6.jpg"
-// import img7 from "./Images/img7.jpg"
+import img7 from "./Images/img7.jpg"
 // import img8 from "./Images/img8.jpg"
 // import img9 from "./Images/img9.jpg"
 // import img10 from "./Images/img10.jpg"
@@ -18,15 +18,22 @@ import img5 from "./Images/img5.jpg"
 // import img18 from "./Images/img18.jpg"
 // import img19 from "./Images/img19.jpg"
 // import img20 from "./Images/img20.jpg"
-// import img21 from "./Images/img21.jpg"
+import img21 from "./Images/img21.jpg"
 // import img22 from "./Images/img22.jpg"
 // import img23 from "./Images/img23.jpg"
 // import img24 from "./Images/img24.jpg"
 
 export const imgEvents = [
-    { name:"img1" , img:img1 , height:140 , width:290},
+    { name:"img202" , img:img2 , height:140 , width:290},
     { name:"img2" , img:img2 , height:140 , width:290},
     { name:"img3" , img:img3 , height:140 , width:290},
     { name:"img4" , img:img4 , height:140 , width:290},
     { name:"img5" , img:img5 , height:140 , width:290},
+];
+
+export const galleryImg = [
+    { name:"img2" , img:img2 , height:140 , width:290},
+    { name:"img4" , img:img4 , height:140 , width:290},
+    { name:"img7" , img:img7 , height:140 , width:290},
+    { name:"img21" , img:img21 , height:140 , width:290},
 ];
