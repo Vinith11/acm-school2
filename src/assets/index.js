@@ -1,4 +1,4 @@
-import img1 from "./Images/img1.jpg"
+// import img1 from "./Images/img1.jpg"
 import img2 from "./Images/img2.jpg"
 import img3 from "./Images/img3.jpg"
 import img4 from "./Images/img4.jpg"
@@ -24,7 +24,6 @@ import img21 from "./Images/img21.jpg"
 // import img24 from "./Images/img24.jpg"
 
 export const imgEvents = [
-    { name:"img202" , img:img2 , height:140 , width:290},
     { name:"img2" , img:img2 , height:140 , width:290},
     { name:"img3" , img:img3 , height:140 , width:290},
     { name:"img4" , img:img4 , height:140 , width:290},
