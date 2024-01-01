@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "About Us", href: "/#about-us", current: true },
-  { name: "Gallery", href: "/#gallery", current: false },
-  { name: "Contact Us", href: "/#contact", current: false },
+  { name: "Gallery", href: "/gallery", current: false },
+  { name: "Contact Us", href: "/contact", current: false },
   { name: "Events", href: "/events", current: false },
   { name: "Faculty", href: "/faculty", current: false },
   { name: "Admission", href: "/admission", current: false },
@@ -39,7 +39,7 @@ export default function Header() {
                 <Link to="/" className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src={Ronaldo}
+                    src="https://4.bp.blogspot.com/-abhM9jw9s44/TBNyEnxpVsI/AAAAAAAAACE/JWrUlBnPiJs/s1600/govt_of_ind_logo.png"
                     alt="Your Company"
                   />
                 </Link>

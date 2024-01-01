@@ -1,8 +1,8 @@
 import React from "react";
 import Topdiv from "../Components/Topdiv";
 import Aboutus from "../Components/Aboutus";
-import Gallery from "../Components/Gallery";
-import Contactus from "../Components/Contactus";
+import Gallery from "./Gallery";
+import Contactus from "./Contactus";
 
 function Home() {
   return (
