@@ -9,7 +9,7 @@ const Topdiv = () => {
           Government <span className=" text-orange-500">Kannada </span>Lower
           Primary School{" "}
         </p>
-        <p className="text-4xl text-center max-sm:text-3xl">Bgm</p>
+        <p className="text-4xl text-center max-sm:text-3xl">Belgaum</p>
       </div>
     </>
   );
