@@ -38,7 +38,7 @@ const Admission = () => {
         <div className="md:flex-1">
           <div className="max-w-md mx-auto p-4 md:p-6 bg-white rounded-md shadow-md">
             <h2 className="text-2xl font-semibold mb-4 text-center">
-              Admission
+              Enquiry
             </h2>
             <form ref={form} onSubmit={sendEmail}>
               {/* Name */}
