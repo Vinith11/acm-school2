@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import conf from "../conf/conf";
+import MapComponent from "../Components/MapComponent/MapComponent";
 
 const Contactus = () => {
   const form = useRef();
@@ -155,6 +156,9 @@ const Contactus = () => {
               Lorem, ipsum dolor.
             </label>
             <p className="text-gray-800">Mr . ABC</p>
+          </div>
+          <div>
+            <MapComponent />
           </div>
         </div>
       </div>
