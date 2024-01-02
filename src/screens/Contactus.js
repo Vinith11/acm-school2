@@ -140,7 +140,7 @@ const Contactus = () => {
               Address
             </label>
             <p className="text-gray-800">
-              Angol Main Road, Chidambarnagar, Angol, Belagavi.
+              Angol Main Road, Chidambar nagar, Angol, Belagavi.
             </p>
           </div>
           <div className="mb-2">

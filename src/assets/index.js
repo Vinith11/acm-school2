@@ -24,10 +24,10 @@ import img21 from "./Images/img21.jpg"
 // import img24 from "./Images/img24.jpg"
 
 export const imgEvents = [
-    { name:"img2" , img:img2 , height:140 , width:290},
-    { name:"img3" , img:img3 , height:140 , width:290},
-    { name:"img4" , img:img4 , height:140 , width:290},
-    { name:"img5" , img:img5 , height:140 , width:290},
+    { name:"img2" , img:img2 , height:140 , width:290, event:"Drawing"},
+    { name:"img3" , img:img3 , height:140 , width:290, event:"Craft"},
+    { name:"img4" , img:img4 , height:140 , width:290, event:"Swach Bharath"},
+    { name:"img5" , img:img5 , height:140 , width:290, event:"Education Rally"},
 ];
 
 export const galleryImg = [
