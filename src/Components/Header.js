@@ -8,7 +8,6 @@ const navigation = [
   { name: "Contact Us", href: "/contact", current: false },
   { name: "Events", href: "/events", current: false },
   { name: "Faculty", href: "/faculty", current: false },
-  { name: "Admission", href: "/admission", current: false },
 ];
 
 function classNames(...classes) {
