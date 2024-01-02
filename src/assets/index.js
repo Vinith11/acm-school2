@@ -36,3 +36,10 @@ export const galleryImg = [
     { name:"img7" , img:img7 , height:140 , width:290},
     { name:"img21" , img:img21 , height:140 , width:290},
 ];
+
+export const EventCat = [
+    {id:1 , name:"Drawing"},
+    {id:2 , name:"Craft" },
+    {id:3 , name:"Swach Bharath"},
+    {id:4 , name:"Education Rally"},
+]
