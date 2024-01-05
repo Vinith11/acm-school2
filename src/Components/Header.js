@@ -1,16 +1,14 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Ronaldo from "../assets/Ronaldo.webp"
 import { Link } from "react-router-dom";
 import ThemeBtn from "./ThemeBtn";
 
 const navigation = [
   { name: "About Us", href: "/#about-us", current: true },
-  { name: "Gallery", href: "/#gallery", current: false },
-  { name: "Contact Us", href: "/#contact", current: false },
+  { name: "Gallery", href: "/gallery", current: false },
+  { name: "Contact Us", href: "/contact", current: false },
   { name: "Events", href: "/events", current: false },
   { name: "Faculty", href: "/faculty", current: false },
-  { name: "Admission", href: "/admission", current: false },
 ];
 
 function classNames(...classes) {
@@ -40,16 +38,16 @@ export default function Header() {
                 <Link to="/" className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src={Ronaldo}
+                    src="https://4.bp.blogspot.com/-abhM9jw9s44/TBNyEnxpVsI/AAAAAAAAACE/JWrUlBnPiJs/s1600/govt_of_ind_logo.png"
                     alt="Your Company"
                   />
                 </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-orange-400 text-white"
@@ -59,7 +57,7 @@ export default function Header() {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                   <ThemeBtn/>

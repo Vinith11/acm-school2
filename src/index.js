@@ -14,6 +14,8 @@ import Admission from "./screens/Admission";
 import Events from "./screens/Events";
 import Faculty from "./screens/Faculty";
 import Home from "./screens/Home";
+import Gallery from './screens/Gallery';
+import Contactus from './screens/Contactus';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
       <Route path="admission" element={<Admission />} />
       <Route path="events" element={<Events />} />
       <Route path="faculty" element={<Faculty />} />
+      <Route path="gallery" element={<Gallery />} />
+      <Route path="contact" element={<Contactus />} />
     </Route>
   )
 );
