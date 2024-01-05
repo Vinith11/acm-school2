@@ -2,6 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Ronaldo from "../assets/Ronaldo.webp"
 import { Link } from "react-router-dom";
+import ThemeBtn from "./ThemeBtn";
 
 const navigation = [
   { name: "About Us", href: "/#about-us", current: true },
@@ -61,6 +62,7 @@ export default function Header() {
                       </a>
                     ))}
                   </div>
+                  <ThemeBtn/>
                 </div>
               </div>
             </div>
